@@ -64,6 +64,9 @@ echo "🔧 Building Docker image..."
 docker build -t $ECR_REPO:$IMAGE_TAG .
 docker tag $ECR_REPO:$IMAGE_TAG $ECR_REPO:latest
 echo "✅ Docker image built successfully: $ECR_REPO:$IMAGE_TAG"
+
+# Simulate failure in this stage to check notification on telegram bot
+exit 1
                     '''
                 }
             }
