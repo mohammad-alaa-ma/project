@@ -110,9 +110,8 @@ for i in $(seq 1 30); do
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo ""
     docker stop $CONTAINER_ID && docker rm $CONTAINER_ID
-    #exit 0
-# Simulate failure in this stage to check notification on telegram bot
-exit 1
+    exit 0
+
     fi
     
     echo "Retry $i/30..."
@@ -163,6 +162,9 @@ echo "📦 Pushing image to ECR..."
 docker push $ECR_REPO:$IMAGE_TAG
 docker push $ECR_REPO:latest
 echo "✅ Image pushed successfully to AWS ECR."
+
+# Simulate failure in this stage to check notification on telegram bot
+exit 1
                         '''
                     }
                 }
