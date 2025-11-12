@@ -163,8 +163,6 @@ docker push $ECR_REPO:$IMAGE_TAG
 docker push $ECR_REPO:latest
 echo "✅ Image pushed successfully to AWS ECR."
 
-# Simulate failure in this stage to check notification on telegram bot
-exit 1
                         '''
                     }
                 }
