@@ -11,7 +11,7 @@ resource "aws_instance" "test_instance" {
   }
 }
 
-resource "aws_instance" "test_instance" {
+resource "aws_instance" "test_instance2" {
   ami           = "ami-0ecb62995f68bb549" 
   instance_type = "t2.micro"
 
